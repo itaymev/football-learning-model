@@ -1,5 +1,5 @@
-# football-learning-model
-The Football Learning Model (FLM) is a machine learning system trained on https://www.football-data.co.uk/data. FLM designed to predict football match outcomes using historical data.
+# Football Learning Model
+The Football Learning Model (FLM) is a machine learning system trained on https://www.football-data.co.uk/data. FLM designed to predict football (soccer) match outcomes using historical data.
 
 The training process involves preprocessing the data, which includes historical football match data such as division, date, home team, away team, full-time home and away goals, and other match statistics. The data is split into training and validation sets using k-fold cross-validation. I used different learning rates to find (not) optimal model parameters. The model, which is implemented with PyTorch, is trained over multiple epochs, and features early stopping to prevent overfitting. 
 
