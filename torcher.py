@@ -79,24 +79,25 @@ for lr in learning_rates:
                     outputs = model(X_batch)
                     loss = criterion(outputs, y_batch)
                     val_loss += loss.item()
-                    _, predicted = torch.max(outputs.data, 1)
+                    _, predicted = torch.max(outputs.data, 1) 
                     total += y_batch.size(0)
                     correct += (predicted == y_batch).sum().item()
             
             val_loss /= len(val_loader)
             accuracy = correct / total
+
+            # See README.md for definitions on all this (pushing this code)
             print(f'Epoch {epoch+1}/{num_epochs}, Validation Loss: {val_loss}, Accuracy: {accuracy * 100:.2f}%')
             
             if early_stopping(val_loss):
-                print("Early stopping triggered")
+                print("Early stopping triggered") # bad probably
                 break
         
         # Print fold accuracy
         fold_accuracies.append(accuracy)
         print(f"Fold {fold + 1} Accuracy: {accuracy * 100:.2f}%")
 
-        # Save the model after training each fold
-        torch.save(model.state_dict(), f'Project 1/folds/model_fold_{fold + 1}.pth')
+        torch.save(model.state_dict(), f'Project 1/folds/model_fold_{fold + 1}.pth') # This is saving to a local location I need to fix this, maybe not idk how much time I have
         print(f"Iteration {fold} - Fold {fold + 1} saved to: model_fold_{fold + 1}.pth")
 
     # Calculate average accuracy for the current learning rate
