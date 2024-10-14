@@ -5,7 +5,7 @@ import pandas as pd
 # I also used it for dynamic data upload
 
 # https://www.kaggle.com/datasets/prateekchauhands/football-data-top-5-european-leagues/data
-FILE_PATH = 'Project 1/football-data-top-5-european-leagues/past-data.csv'
+FILE_PATH = 'football-learning-model/data/past-data.csv'
 
 class DataReader():
     def __init__(self, path=FILE_PATH) -> None:

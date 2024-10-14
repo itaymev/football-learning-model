@@ -9,7 +9,7 @@ from classes.FootballPredictorClass import FootballPredictor
 from classes.EarlyStoppingClass import EarlyStopping
 from classes.PreprocessorClass import Preprocessor
 
-FILE_PATH = 'Project 1/football-data-top-5-european-leagues/past-data.csv'
+FILE_PATH = 'football-learning-model/data/past-data.csv'
 
 # Initialize the preprocessor and get preprocessed data
 preprocessor = Preprocessor(FILE_PATH)

@@ -169,14 +169,14 @@ def sensitivity_analysis(model, baseline_features, feature_index, variation_rang
 
 if __name__ == "__main__":
     input_dim = 24  # Corrected number of input features
-    model_path = 'Project 1/folds/model_fold_3.pth'  # Replace with the path to your saved model
+    model_path = 'football-learning-model/folds/model_fold_3.pth'  # Replace with the path to your saved model
 
     # Load the model
     model = load_model(model_path, input_dim)
 
     # Prepare input features with only home and away team names and skewed value
     home_team = 'Arsenal'
-    away_team = 'Arsenal'
+    away_team = 'Chelsea'
     additional_info = {}  # Inflate the Home Shots value to test the model
     input_features = prepare_input_features(home_team, away_team, additional_info)
 
